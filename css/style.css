@@ -6,13 +6,17 @@ body {
 .container {
   max-width: 1180px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
-.logo {
+.rounded-logo {
   display: block;
+  overflow: hidden;
   width: 140px;
   height: 140px;
   margin: 20px auto;
+  border-radius: 100%;
+  box-shadow: 0 0 1px 1px #999;
 }
 
 .toggle-nav {
@@ -45,8 +49,81 @@ body {
 
 .banner img {
   min-width: 100%;
+  max-width: 100%;
 }
 
+.product {
+  padding: 10px 0;
+}
+
+.product p {
+  margin: 0 0 20px;
+}
+
+.photo-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.photo-container .photo {
+  min-width: 100%;
+}
+
+.photo-container .special {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.photo-container .zoom {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  padding: 20px 20px;
+
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.more {
+  padding: 10px 10px;
+
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+
+  background-color: #666;
+}
+
+.main-footer {
+  background-color: #fff;
+}
+
+.main-footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+.main-footer li {
+  display: block;
+  width: 100%;
+  padding: 20px 10px;
+  margin-bottom: 1px;
+  background-color: #b82519;
+}
+
+.main-footer a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 
 
 @media (min-width: 768px) {
@@ -62,10 +139,51 @@ body {
     width: auto;
     padding: 20px 20px;
   }
+
+  .vip-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .product {
+    width: 49%;
+  }
 }
 
 @media (min-width: 1024px) {
+  .container {
+    padding: 0;
+  }
+
   .main-nav li {
     padding: 20px 40px;
+  }
+
+  .product {
+    width: 33%;
+  }
+
+  .main-footer {
+    margin-top: 60px;
+    padding: 40px;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    background-color: #b82519;
+  }
+
+  .main-footer li {
+    display: inline-block;
+    width: auto;
+    padding: 0;
+  }
+
+  .main-footer li::after {
+    content: ' |';
+    color: #fff;
+  }
+
+  .main-footer li:last-child::after {
+    content: '';
   }
 }
